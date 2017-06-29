@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yanzhuit.github.io/2017/06/29/Write-operations-are-not-allowed-in-read-only-mode-FlushMode-MANUAL/</loc>
+    
+    <lastmod>2017-06-29T14:29:59.822Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yanzhuit.github.io/2017/06/26/Push-error-in-Eclipse-cannot-connect-not-authorized/</loc>
     
     <lastmod>2017-06-27T03:38:33.231Z</lastmod>
