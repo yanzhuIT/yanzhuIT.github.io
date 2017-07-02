@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yanzhuit.github.io/2017/07/02/java-lang-ClassCastException-java-lang-Long-cannot-be-cast-to-java-lang-Integer/</loc>
+    
+    <lastmod>2017-07-02T06:36:41.579Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yanzhuit.github.io/2017/07/01/Struts-2-common-result-types/</loc>
     
-    <lastmod>2017-07-01T20:15:37.397Z</lastmod>
+    <lastmod>2017-07-02T02:36:23.629Z</lastmod>
     
   </url>
   
