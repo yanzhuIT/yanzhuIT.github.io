@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yanzhuit.github.io/2017/07/04/Using-SSH-to-upload-file/</loc>
+    <loc>https://yanzhuit.github.io/2017/07/06/Using-Struts-2-to-upload-file/</loc>
     
-    <lastmod>2017-07-05T01:39:51.820Z</lastmod>
+    <lastmod>2017-07-06T04:15:08.438Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yanzhuit.github.io/2017/07/05/HHH000142-Bytecode-enhancement-failed/</loc>
+    
+    <lastmod>2017-07-06T04:10:52.024Z</lastmod>
     
   </url>
   
