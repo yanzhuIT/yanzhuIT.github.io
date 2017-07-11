@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yanzhuit.github.io/2017/07/07/Code-review-and-Dao-optimization-BaseDao/</loc>
+    
+    <lastmod>2017-07-07T19:15:37.042Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yanzhuit.github.io/2017/07/07/could-not-initialize-proxy-no-Session/</loc>
+    
+    <lastmod>2017-07-07T16:20:50.024Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yanzhuit.github.io/2017/07/06/Using-Struts-2-to-upload-file/</loc>
     
     <lastmod>2017-07-06T04:15:08.438Z</lastmod>

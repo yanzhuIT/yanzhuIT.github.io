@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="SSH,Dao," />
 
 
 
@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="Error Information:java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer  Error Cause:12345678910@SuppressWarnings(&quot;unchecked&quot;)	public int findCount() &amp;#123;		// here &quot;Custom">
-<meta name="keywords" content="Java">
+<meta name="description" content="Reflection: .java to .class, to get .class  Class.forName(…) “ClassName”.class “object”.getClass(), this method is in class “Object”   Generic: &amp;lt;&amp;gt;–typeof  Dao optimization:  New interface “BaseD">
+<meta name="keywords" content="SSH,Dao">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java.lang.Long cannot be cast to java.lang.Integer">
-<meta property="og:url" content="https://yanzhuit.github.io/2017/07/02/java-lang-ClassCastException-java-lang-Long-cannot-be-cast-to-java-lang-Integer/index.html">
+<meta property="og:title" content="Code review and Dao optimization--BaseDao">
+<meta property="og:url" content="https://yanzhuit.github.io/2017/07/07/Code-review-and-Dao-optimization-BaseDao/index.html">
 <meta property="og:site_name" content="Yan&#39;s">
-<meta property="og:description" content="Error Information:java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer  Error Cause:12345678910@SuppressWarnings(&quot;unchecked&quot;)	public int findCount() &amp;#123;		// here &quot;Custom">
-<meta property="og:updated_time" content="2017-07-02T06:36:41.579Z">
+<meta property="og:description" content="Reflection: .java to .class, to get .class  Class.forName(…) “ClassName”.class “object”.getClass(), this method is in class “Object”   Generic: &amp;lt;&amp;gt;–typeof  Dao optimization:  New interface “BaseD">
+<meta property="og:updated_time" content="2017-07-07T19:15:37.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java.lang.Long cannot be cast to java.lang.Integer">
-<meta name="twitter:description" content="Error Information:java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer  Error Cause:12345678910@SuppressWarnings(&quot;unchecked&quot;)	public int findCount() &amp;#123;		// here &quot;Custom">
+<meta name="twitter:title" content="Code review and Dao optimization--BaseDao">
+<meta name="twitter:description" content="Reflection: .java to .class, to get .class  Class.forName(…) “ClassName”.class “object”.getClass(), this method is in class “Object”   Generic: &amp;lt;&amp;gt;–typeof  Dao optimization:  New interface “BaseD">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://yanzhuit.github.io/2017/07/02/java-lang-ClassCastException-java-lang-Long-cannot-be-cast-to-java-lang-Integer/"/>
+  <link rel="canonical" href="https://yanzhuit.github.io/2017/07/07/Code-review-and-Dao-optimization-BaseDao/"/>
 
 
 
 
 
-  <title>java.lang.Long cannot be cast to java.lang.Integer | Yan's</title>
+  <title>Code review and Dao optimization--BaseDao | Yan's</title>
   
 
 
@@ -265,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yanzhuit.github.io/2017/07/02/java-lang-ClassCastException-java-lang-Long-cannot-be-cast-to-java-lang-Integer/">
+    <link itemprop="mainEntityOfPage" href="https://yanzhuit.github.io/2017/07/07/Code-review-and-Dao-optimization-BaseDao/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yan Zhu">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java.lang.Long cannot be cast to java.lang.Integer</h1>
+          <h1 class="post-title" itemprop="name headline">Code review and Dao optimization--BaseDao</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-02T01:14:37-04:00">
-                2017-07-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-07T12:41:45-04:00">
+                2017-07-07
               </time>
             
 
@@ -335,9 +335,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/02/java-lang-ClassCastException-java-lang-Long-cannot-be-cast-to-java-lang-Integer/#comments" itemprop="discussionUrl">
+                <a href="/2017/07/07/Code-review-and-Dao-optimization-BaseDao/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/02/java-lang-ClassCastException-java-lang-Long-cannot-be-cast-to-java-lang-Integer/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/07/07/Code-review-and-Dao-optimization-BaseDao/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -362,14 +362,26 @@
       
 
       
-        <p>Error Information:<br><code>java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer</code></p>
+        <p>Reflection: .java to .class, to get .class</p>
+<ul>
+<li>Class.forName(…)</li>
+<li>“ClassName”.class</li>
+<li>“object”.getClass(), this method is in class “Object”</li>
+</ul>
 <hr>
-<p>Error Cause:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findCount</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="comment">// here "Customer" is class name</span></div><div class="line">		List&lt;Object&gt; list = (List&lt;Object&gt;) <span class="keyword">this</span>.getHibernateTemplate().find(<span class="string">"select count(*) from Customer"</span>);</div><div class="line">		<span class="keyword">if</span>(list != <span class="keyword">null</span> &amp;&amp; list.size() !=<span class="number">0</span>)&#123;</div><div class="line">			<span class="keyword">int</span> count = (<span class="keyword">int</span>) list.get(<span class="number">0</span>); <span class="comment">// !!!!!!!error occurs!!!!!!!!!!!</span></div><div class="line">			<span class="keyword">return</span> count;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<p>Generic: &lt;&gt;–typeof</p>
+<hr>
+<p>Dao optimization:</p>
+<ul>
+<li>New interface “BaseDao” and its implementing class “BaseDaoImpl”<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BaseDao</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(T t)</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(T t)</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">(T t)</span></span>;</div><div class="line">	<span class="function">T <span class="title">findById</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</div><div class="line">	<span class="function">List&lt;T&gt; <span class="title">findAll</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <a id="more"></a>
-<hr>
-<p>Error Solution:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findCount</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="comment">// here "Customer" is class name</span></div><div class="line">		List&lt;Object&gt; list = (List&lt;Object&gt;) <span class="keyword">this</span>.getHibernateTemplate().find(<span class="string">"select count(*) from Customer"</span>);</div><div class="line">		<span class="keyword">if</span>(list != <span class="keyword">null</span> &amp;&amp; list.size() !=<span class="number">0</span>)&#123;</div><div class="line">			Long lcount = (Long) list.get(<span class="number">0</span>);</div><div class="line">			<span class="keyword">int</span> count = lcount.intValue();</div><div class="line">			<span class="keyword">return</span> count;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
-<hr>
-<p>Summary:<br><code>select count(*) from Customer</code> in Hibernate return a Long number after version 3.2, so <code>List&lt;Object&gt;</code>.<br><code>Object to Integer</code> should be <code>Object to Long, then to Integer</code>.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseDaoImpl</span>&lt;<span class="title">T</span>&gt; <span class="keyword">extends</span> <span class="title">HibernateDaoSupport</span> <span class="keyword">implements</span> <span class="title">BaseDao</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> Class pClass;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">BaseDaoImpl</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="comment">// get running class which one extends BaseDaoImpl, here is</span></div><div class="line">		<span class="comment">// CustomerDaoImpl</span></div><div class="line">		Class clazz = <span class="keyword">this</span>.getClass();</div><div class="line">		<span class="comment">// get BaseDaoImpl&lt;Customer&gt;, import java.lang.reflect.Type</span></div><div class="line">		Type type = clazz.getGenericSuperclass();</div><div class="line">		ParameterizedType pType = (ParameterizedType) type;</div><div class="line">		<span class="comment">// get &lt;Customer&gt;</span></div><div class="line">		Type[] types = pType.getActualTypeArguments();</div><div class="line">		Class tClass = (Class) types[<span class="number">0</span>];</div><div class="line"></div><div class="line">		pClass = tClass;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(T t)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.getHibernateTemplate().save(t);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(T t)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.getHibernateTemplate().update(t);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">(T t)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.getHibernateTemplate().delete(t);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// cannot code like T.class</span></div><div class="line">	<span class="function"><span class="keyword">public</span> T <span class="title">findById</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</div><div class="line">		<span class="comment">// return (T) this.getHibernateTemplate().get(T.class, id);</span></div><div class="line">		<span class="keyword">return</span> (T) <span class="keyword">this</span>.getHibernateTemplate().get(pClass, id);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> List&lt;T&gt; <span class="title">findAll</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="comment">// return this.getHibernateTemplate().find("from ", T);</span></div><div class="line">		<span class="keyword">return</span> (List&lt;T&gt;) <span class="keyword">this</span>.getHibernateTemplate().find(<span class="string">"from "</span> + pClass.getSimpleName());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Let normal interface Dao to extends BaseDao, then I can delete repetitive methods in normal interface Dao file.<br><code>public interface CustomerDao extends BaseDao&lt;Customer&gt;{...}  // here CustomerDao is a concrete interface</code></li>
+<li>Let normal class Dao to extends BaseDaoImpl, then I can delete repetitive methods in normal class Dao file. The normal class do not need to extends HibernateDaoSupport because it has been done in BaseDaoImpl.<br><code>public class CustomerDaoImpl extends BaseDaoImpl&lt;Customer&gt; implements CustomerDao{...}</code><br><code>here CustomerDaoImpl is a concrete class</code></li>
+</ul>
 
       
     </div>
@@ -399,7 +411,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/SSH/" rel="tag"># SSH</a>
+          
+            <a href="/tags/Dao/" rel="tag"># Dao</a>
           
         </div>
       
@@ -412,8 +426,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/01/Struts-2-common-result-types/" rel="next" title="Struts 2 common result types">
-                <i class="fa fa-chevron-left"></i> Struts 2 common result types
+              <a href="/2017/07/07/could-not-initialize-proxy-no-Session/" rel="next" title="could not initialize proxy - no Session">
+                <i class="fa fa-chevron-left"></i> could not initialize proxy - no Session
               </a>
             
           </div>
@@ -421,10 +435,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/03/HTTP-Status-404-No-result-defined-for-action-xxx-and-result-input/" rel="prev" title="HTTP Status 404-No result defined for action xxx and result input">
-                HTTP Status 404-No result defined for action xxx and result input <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -689,9 +699,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://yanzhuit.github.io/2017/07/02/java-lang-ClassCastException-java-lang-Long-cannot-be-cast-to-java-lang-Integer/';
-          this.page.identifier = '2017/07/02/java-lang-ClassCastException-java-lang-Long-cannot-be-cast-to-java-lang-Integer/';
-          this.page.title = 'java.lang.Long cannot be cast to java.lang.Integer';
+          this.page.url = 'https://yanzhuit.github.io/2017/07/07/Code-review-and-Dao-optimization-BaseDao/';
+          this.page.identifier = '2017/07/07/Code-review-and-Dao-optimization-BaseDao/';
+          this.page.title = 'Code review and Dao optimization--BaseDao';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://alec-zhu.disqus.com/embed.js';
