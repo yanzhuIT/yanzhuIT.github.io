@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yanzhuit.github.io/2017/07/12/Maven-web-project-run-error-Unable-to-compile-class-for-JSP/</loc>
+    
+    <lastmod>2017-07-13T02:38:50.265Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yanzhuit.github.io/2017/07/07/Code-review-and-Dao-optimization-BaseDao/</loc>
     
     <lastmod>2017-07-07T19:15:37.042Z</lastmod>
