@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yanzhuit.github.io/2017/07/20/Upload-file-by-using-SpringMVC-CommonsMultipartResolver/</loc>
+    
+    <lastmod>2017-07-21T02:41:44.496Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yanzhuit.github.io/2017/07/15/Mapping-is-missing-column-attribute-for-prop/</loc>
+    
+    <lastmod>2017-07-16T01:15:01.490Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yanzhuit.github.io/2017/07/14/Add-XML-catalog-in-Eclipse-for-coding-prompt/</loc>
+    
+    <lastmod>2017-07-14T06:02:11.242Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yanzhuit.github.io/2017/07/12/Maven-web-project-run-error-Unable-to-compile-class-for-JSP/</loc>
     
     <lastmod>2017-07-13T02:38:50.265Z</lastmod>
